@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // Start the server
-const PORT = 142;
+const PORT = process.env.PORT || 3000;
 
 // Routes
 app.post("/signupuser", async (req, res) => {
@@ -406,6 +406,6 @@ app.post("/startSession", async (req, res) => {
     }
 })
 
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server running on port ${PORT}`);
 });
