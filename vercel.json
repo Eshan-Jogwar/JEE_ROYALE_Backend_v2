@@ -1,7 +1,5 @@
 {
-  "build": {
-    
-  },
+  "build": {},
   "routes": [
     {
       "src": "/(.*)",
@@ -10,7 +8,7 @@
   ],
   "functions": {
     "api/index.js": {
-      "runtime": "nodejs18.x",
+      "runtime": "vercel-node@18",
       "includeFiles": "prisma/schema.prisma"
     }
   }
